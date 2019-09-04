@@ -5,54 +5,93 @@
     android:layout_height="match_parent"
     tools:context=".MainFragment">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="main fragment" />
+            android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/loginStateButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="goto User Detail" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="main fragment" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/gotoNewListButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="goto New List" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginStateButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="goto User Detail" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/gotoUserDetailButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="goto User Detail" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/gotoNewListButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="goto New List" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/gotoNewsCollectionButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="goto News Collection" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/去新闻详情页面按钮"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="去新闻详情页面按钮" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/gotoNoViewFragmentButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="goto NO View Fragment" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/打开多个新闻详情页面按钮"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="打开多个新闻详情页面" />
 
-    </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/gotoUserDetailButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="goto User Detail" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/gotoNewsCollectionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="goto News Collection" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/gotoNoViewFragmentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="goto NO View Fragment" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/非栈顶fragment弹出dialogButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="非栈顶fragment弹出dialog" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/去登录页面按钮"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="去登录页面" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/去登录页面按钮2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="去登录页面(全局Action)" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </FrameLayout>
