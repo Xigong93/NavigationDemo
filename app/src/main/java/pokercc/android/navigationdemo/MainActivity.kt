@@ -28,6 +28,8 @@ class FragmentLifeLogger : FragmentManager.FragmentLifecycleCallbacks() {
         savedInstanceState: Bundle?
     ) {
         super.onFragmentViewCreated(fm, f, v, savedInstanceState)
+        log("onFragmentViewCreated", fm, f)
+
     }
 
     override fun onFragmentStopped(fm: FragmentManager, f: Fragment) {
@@ -59,6 +61,8 @@ class FragmentLifeLogger : FragmentManager.FragmentLifecycleCallbacks() {
 
     override fun onFragmentPreAttached(fm: FragmentManager, f: Fragment, context: Context) {
         super.onFragmentPreAttached(fm, f, context)
+        log("onFragmentPreAttached", fm, f)
+
     }
 
     override fun onFragmentDestroyed(fm: FragmentManager, f: Fragment) {
@@ -69,10 +73,14 @@ class FragmentLifeLogger : FragmentManager.FragmentLifecycleCallbacks() {
 
     override fun onFragmentSaveInstanceState(fm: FragmentManager, f: Fragment, outState: Bundle) {
         super.onFragmentSaveInstanceState(fm, f, outState)
+        log("onFragmentSaveInstanceState", fm, f)
+
     }
 
     override fun onFragmentStarted(fm: FragmentManager, f: Fragment) {
         super.onFragmentStarted(fm, f)
+        log("onFragmentStarted", fm, f)
+
     }
 
     override fun onFragmentViewDestroyed(fm: FragmentManager, f: Fragment) {
@@ -86,6 +94,8 @@ class FragmentLifeLogger : FragmentManager.FragmentLifecycleCallbacks() {
         savedInstanceState: Bundle?
     ) {
         super.onFragmentPreCreated(fm, f, savedInstanceState)
+        log("onFragmentPreCreated", fm, f)
+
     }
 
     override fun onFragmentActivityCreated(
@@ -94,15 +104,19 @@ class FragmentLifeLogger : FragmentManager.FragmentLifecycleCallbacks() {
         savedInstanceState: Bundle?
     ) {
         super.onFragmentActivityCreated(fm, f, savedInstanceState)
+        log("onFragmentActivityCreated", fm, f)
+
     }
 
     override fun onFragmentPaused(fm: FragmentManager, f: Fragment) {
         super.onFragmentPaused(fm, f)
+        log("onFragmentPaused", fm, f)
+
     }
 
     override fun onFragmentDetached(fm: FragmentManager, f: Fragment) {
         super.onFragmentDetached(fm, f)
-        log("onFragmentDetached ( fm = [${fm}], f = [${f}]  )")
+        log("onFragmentDetached", fm, f)
 
     }
 }

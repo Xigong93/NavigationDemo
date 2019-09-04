@@ -52,7 +52,9 @@ class MainFragment : Fragment() {
                 findNavController(this).navigate(R.id.action_mainFragment_to_loginFragment2)
             }
         }
-
+        gotoNoViewFragmentButton.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_noViewFragment)
+        }
 
 
     }

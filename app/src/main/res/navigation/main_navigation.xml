@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_mainFragment_to_newsCollectionFragment"
             app:destination="@id/newsCollectionFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_noViewFragment"
+            app:destination="@id/noViewFragment" />
     </fragment>
     <fragment
         android:id="@+id/newsListFragment"
@@ -66,4 +69,8 @@
             android:id="@+id/deepLink2"
             app:uri="pokercc.com/android/newsCollection" />
     </fragment>
+    <fragment
+        android:id="@+id/noViewFragment"
+        android:name="pokercc.android.navigationdemo.NoViewFragment"
+        android:label="NoViewFragment" />
 </navigation>

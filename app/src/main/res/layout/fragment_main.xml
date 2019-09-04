@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="goto User Detail" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/gotoNewListButton"
             android:layout_width="match_parent"
@@ -43,6 +44,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="goto News Collection" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/gotoNoViewFragmentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="goto NO View Fragment" />
 
     </LinearLayout>
 
