@@ -97,6 +97,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="到视频播放横屏页面" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/设置状态栏颜色的按钮"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="设置状态栏颜色的页面" />
         </LinearLayout>
     </ScrollView>
 

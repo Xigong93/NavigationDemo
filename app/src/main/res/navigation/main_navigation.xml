@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_mainFragment_to_noViewFragment"
             app:destination="@id/noViewFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_stateBarFragment"
+            app:destination="@id/stateBarFragment" />
     </fragment>
     <fragment
         android:id="@+id/newsListFragment"
@@ -92,4 +95,9 @@
         android:id="@+id/action_global_fullScreenVideoFragment"
         app:destination="@id/fullScreenVideoFragment"
         app:launchSingleTop="true" />
+    <fragment
+        android:id="@+id/stateBarFragment"
+        android:name="pokercc.android.navigationdemo.StateBarFragment"
+        android:label="fragment_state_bar"
+        tools:layout="@layout/fragment_state_bar" />
 </navigation>

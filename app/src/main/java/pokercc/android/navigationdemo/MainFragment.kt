@@ -128,6 +128,9 @@ class MainFragment : Fragment() {
         视频播放横屏按钮.setOnClickListener {
             findNavController().navigate(R.id.action_global_fullScreenVideoFragment)
         }
+        设置状态栏颜色的按钮.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_stateBarFragment)
+        }
 
     }
 
