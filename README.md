@@ -13,6 +13,24 @@
 - ui 效果处理
     * 多个Fragment公用ToolBar
 - 状态栏处理
+```kotlin
+    private var defaultStateBarColor: Int = 0 
+    override fun onResume() {
+        super.onResume()
+        //设置系统状态栏的背景色
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            defaultStateBarColor = requireActivity().window.statusBarColor
+            requireActivity().window.statusBarColor = Color.YELLOW
+
+        }
+     }
+    override fun onPause() {
+        super.onPause()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            requireActivity().window.statusBarColor = defaultStateBarColor
+        }
+    }
+```
 - 竖横屏处理
 1. AndroidManifest 中对activity 设置  android:configChanges="orientation",防止activity 切换方向后重启
 2. 设置代码
