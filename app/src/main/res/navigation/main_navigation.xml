@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_mainFragment_to_loginFragment2"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_newsCollectionFragment"
+            app:destination="@id/newsCollectionFragment" />
     </fragment>
     <fragment
         android:id="@+id/newsListFragment"
@@ -33,15 +36,34 @@
         android:id="@+id/newDetailFragment"
         android:name="pokercc.android.navigationdemo.NewDetailFragment"
         android:label="fragment_new_detail"
-        tools:layout="@layout/fragment_new_detail" />
+        tools:layout="@layout/fragment_new_detail" >
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="pokercc.com/android/article/{id}"
+            android:autoVerify="true" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/userDetailFragment"
         android:name="pokercc.android.navigationdemo.UserDetailFragment"
         android:label="fragment_user_detail"
-        tools:layout="@layout/fragment_user_detail" />
+        tools:layout="@layout/fragment_user_detail" >
+
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="pokercc.android.navigationdemo.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/newsCollectionFragment"
+        android:name="pokercc.android.navigationdemo.NewsCollectionFragment"
+        android:label="fragment_news_collection"
+        tools:layout="@layout/fragment_news_collection" >
+        <deepLink
+            android:id="@+id/deepLink2"
+            app:uri="pokercc.com/android/newsCollection" />
+    </fragment>
 </navigation>

@@ -24,9 +24,13 @@ class NewsListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (view as ViewGroup).apply {
-            (0 until childCount ).forEach {
-                getChildAt(it).setOnClickListener {
-                    findNavController().navigate(R.id.action_newsListFragment_to_newDetailFragment)
+            (0 until childCount).forEach { index ->
+                getChildAt(index).setOnClickListener {
+                    findNavController().navigate(
+                        R.id.action_newsListFragment_to_newDetailFragment,
+                        Bundle().apply {
+                            putString("id", index.toString())
+                        })
                 }
             }
         }

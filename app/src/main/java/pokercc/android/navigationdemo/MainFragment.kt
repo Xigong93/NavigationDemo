@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_main.*
 
 /**
@@ -43,6 +44,15 @@ class MainFragment : Fragment() {
         loginStateButton.setOnClickListener {
             findNavController(this).navigate(R.id.action_mainFragment_to_loginFragment2)
         }
+        gotoNewsCollectionButton.setOnClickListener {
+            // 需要先登录
+            if (UserManager.isLogin(it.context)) {
+                findNavController(this).navigate(R.id.action_mainFragment_to_newsCollectionFragment)
+            } else {
+                findNavController(this).navigate(R.id.action_mainFragment_to_loginFragment2)
+            }
+        }
+
 
 
     }
