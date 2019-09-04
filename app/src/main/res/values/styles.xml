@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppFragment">
+
+    </style>
+
+    <style name="BlackFragment" parent="AppFragment">
+        <item name="android:background">#000</item>
+        <item name="android:textColor">#fff</item>
+    </style>
 </resources>

@@ -90,6 +90,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="去登录页面(全局Action)" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/视频播放横屏按钮"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="到视频播放横屏页面" />
         </LinearLayout>
     </ScrollView>
 

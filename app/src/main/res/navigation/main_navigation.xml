@@ -72,7 +72,9 @@
     <fragment
         android:id="@+id/noViewFragment"
         android:name="pokercc.android.navigationdemo.NoViewFragment"
-        android:label="NoViewFragment" />
+        android:label="NoViewFragment" >
+
+    </fragment>
     <action
         android:id="@+id/action_global_loginFragment"
         app:destination="@id/loginFragment" />
@@ -80,5 +82,14 @@
         android:id="@+id/action_global_newDetailFragment"
         app:launchSingleTop="true"
         app:destination="@id/newDetailFragment" />
+    <fragment
+        android:id="@+id/fullScreenVideoFragment"
+        android:name="pokercc.android.navigationdemo.FullScreenVideoFragment"
+        android:label="fragment_full_screen_video"
+        tools:layout="@layout/fragment_full_screen_video" />
     <!--   app:launchSingleTop="true" 禁止弹出多个相同的页面-->
+    <action
+        android:id="@+id/action_global_fullScreenVideoFragment"
+        app:destination="@id/fullScreenVideoFragment"
+        app:launchSingleTop="true" />
 </navigation>

@@ -125,6 +125,9 @@ class MainFragment : Fragment() {
             findNavController(this).navigate(R.id.action_global_loginFragment)
 
         }
+        视频播放横屏按钮.setOnClickListener {
+            findNavController().navigate(R.id.action_global_fullScreenVideoFragment)
+        }
 
     }
 
