@@ -72,7 +72,8 @@ View既可以设置Style也可以设置Theme
 Theme对当前View和他的子View的属性都生效
 Style 只对当前的View属性起作用
 Application和Activity都可以设置Style,但是本质上都是把Style当做Theme设置到了RootView上
-8.
+8. 子导航图是什么意思？有什么用？
+
 ## 后记
 为什么要写这个，因为我工作4年多了，这玩意我也不6，所以想系统学习一下。
 我是一只菜鸡，什么地方如果搞错了，请啄我，哈哈。

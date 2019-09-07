@@ -135,6 +135,9 @@ class MainFragment : Fragment() {
             findNavController().navigate(R.id.action_global_mainFragment)
         }
 
+        打开魂斗罗按钮.setOnClickListener {
+            findNavController().navigate(R.id.navigation_game)
+        }
     }
 
     private fun gotoLoginPage() {

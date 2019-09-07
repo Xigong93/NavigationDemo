@@ -46,7 +46,8 @@
         <deepLink
             android:id="@+id/deepLink"
             android:autoVerify="true"
-            app:uri="pokercc.com/android/article/{id}" />
+            app:uri="pokercc.com/android/article/{id}"
+            tools:targetApi="m" />
         <argument
             android:name="id"
             app:argType="string" />
@@ -75,7 +76,7 @@
     <fragment
         android:id="@+id/noViewFragment"
         android:name="pokercc.android.navigationdemo.NoViewFragment"
-        android:label="NoViewFragment" >
+        android:label="NoViewFragment">
 
     </fragment>
     <action
@@ -83,8 +84,8 @@
         app:destination="@id/loginFragment" />
     <action
         android:id="@+id/action_global_newDetailFragment"
-        app:launchSingleTop="true"
-        app:destination="@id/newDetailFragment" />
+        app:destination="@id/newDetailFragment"
+        app:launchSingleTop="true" />
     <fragment
         android:id="@+id/fullScreenVideoFragment"
         android:name="pokercc.android.navigationdemo.FullScreenVideoFragment"
@@ -108,4 +109,59 @@
     <action
         android:id="@+id/action_global_mainFragment"
         app:destination="@+id/otherActivity" />
+    <navigation
+        android:id="@+id/navigation_game"
+        android:label="游戏模块"
+        app:startDestination="@id/contraFragment">
+        <fragment
+            android:id="@+id/contraFragment"
+            android:name="pokercc.android.navigationdemo.smallgame.ContraFragment"
+            android:label="魂斗罗游戏介绍"
+            tools:layout="@layout/fragment_contra">
+            <action
+                android:id="@+id/action_contraFragment_to_gameStageFragment"
+                app:destination="@id/gameStageFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/gameStageFragment"
+            android:name="pokercc.android.navigationdemo.smallgame.GameStageFragment"
+            android:label="选择关卡"
+            tools:layout="@layout/fragment_game_stage">
+            <action
+                android:id="@+id/action_gameStageFragment_to_fightFragment"
+                app:destination="@id/fightFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/fightFragment"
+            android:name="pokercc.android.navigationdemo.smallgame.FightFragment"
+            android:label="战斗页面"
+            tools:layout="@layout/fragment_fight">
+            <argument
+                android:name="id"
+                android:defaultValue="0"
+                app:argType="integer"
+                app:nullable="false" />
+            <action
+                android:id="@+id/action_fightFragment_to_gameOverFragment"
+                app:destination="@id/gameOverFragment"
+                app:popUpTo="@+id/gameStageFragment" />
+            <action
+                android:id="@+id/action_fightFragment_to_gamePassFragment"
+                app:destination="@id/gamePassFragment"
+                app:popUpTo="@+id/gameStageFragment" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/gamePassFragment"
+            android:name="pokercc.android.navigationdemo.smallgame.GamePassFragment"
+            android:label="通关"
+            tools:layout="@layout/fragment_game_pass" />
+        <fragment
+            android:id="@+id/gameOverFragment"
+            android:name="pokercc.android.navigationdemo.smallgame.GameOverFragment"
+            android:label="游戏结束"
+            tools:layout="@layout/fragment_game_over" />
+
+
+    </navigation>
 </navigation>
