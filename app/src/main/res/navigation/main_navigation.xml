@@ -100,4 +100,12 @@
         android:name="pokercc.android.navigationdemo.StateBarFragment"
         android:label="fragment_state_bar"
         tools:layout="@layout/fragment_state_bar" />
+    <activity
+        android:id="@+id/otherActivity"
+        android:name="pokercc.android.navigationdemo.OtherActivity"
+        android:label="activity_other"
+        tools:layout="@layout/activity_other" />
+    <action
+        android:id="@+id/action_global_mainFragment"
+        app:destination="@+id/otherActivity" />
 </navigation>

@@ -131,6 +131,9 @@ class MainFragment : Fragment() {
         设置状态栏颜色的按钮.setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_stateBarFragment)
         }
+        跳转到其他activity按钮.setOnClickListener {
+            findNavController().navigate(R.id.action_global_mainFragment)
+        }
 
     }
 

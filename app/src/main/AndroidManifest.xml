@@ -25,6 +25,6 @@
             <nav-graph android:value="@navigation/main_navigation" />
 
         </activity>
+        <activity android:name="pokercc.android.navigationdemo.OtherActivity"></activity>
     </application>
-
 </manifest>

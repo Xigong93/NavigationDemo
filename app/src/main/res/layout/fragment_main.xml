@@ -104,6 +104,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="设置状态栏颜色的页面" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/跳转到其他activity按钮"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="跳转到其他activity" />
+
         </LinearLayout>
     </ScrollView>
 
