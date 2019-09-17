@@ -66,7 +66,7 @@ class FragmentConfig(private val fragment: Fragment) {
 
     }
 
-    private val lightSystemBarConfig = FragmentConfigItem(isLightSystemBar(activity))
+    private val lightSystemBarConfig = FragmentConfigItem(isLightSystemBar(decorView))
     /**
      * 设置亮色系统状态栏
      */
@@ -135,9 +135,9 @@ private fun getStatusBarColor(window: Window): Int {
 
 }
 
-private fun isLightSystemBar(activity: Activity): Boolean =
+private fun isLightSystemBar(view: View): Boolean =
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-        activity.window.decorView.systemUiVisibility and View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR != 0
+        view.systemUiVisibility and View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR != 0
     } else {
         false
     }
