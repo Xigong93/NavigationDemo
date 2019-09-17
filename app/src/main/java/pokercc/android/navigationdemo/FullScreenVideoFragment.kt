@@ -5,7 +5,7 @@ import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import pokercc.android.navigationdemo.util.FragmentConfig
 
 /**
  * 横屏的页面
@@ -28,16 +28,18 @@ class FullScreenVideoFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        FragmentConfig(this).setOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE)
 
     }
 
-    private var defaultOrientation: Int = 0
+    //    private var defaultOrientation: Int = 0
     private var defaultWindowFlags: Int = 0
+
     override fun onStart() {
         super.onStart()
-        // 设置方向
-        defaultOrientation = requireActivity().requestedOrientation
-        requireActivity().requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+//        // 设置方向
+//        defaultOrientation = requireActivity().requestedOrientation
+//        requireActivity().requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
 
         // 设置隐藏状态栏
         defaultWindowFlags = requireActivity().window.attributes.flags
@@ -47,7 +49,7 @@ class FullScreenVideoFragment : Fragment() {
 
     override fun onStop() {
         super.onStop()
-        requireActivity().requestedOrientation = defaultOrientation
+//        requireActivity().requestedOrientation = defaultOrientation
         requireActivity().window.attributes.flags = defaultWindowFlags
         requireActivity().window.attributes = requireActivity().window.attributes
 
