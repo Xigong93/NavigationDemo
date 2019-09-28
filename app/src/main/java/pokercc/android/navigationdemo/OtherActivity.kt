@@ -8,5 +8,7 @@ class OtherActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_other)
+
+        // todo，我要跳转到一个fragment
     }
 }
